@@ -59,8 +59,8 @@ public class ChooserActivity extends AppCompatActivity {
         mActivities.setLayoutManager(new LinearLayoutManager(this));
         mActivities.setAdapter(new ActivityChooserAdapter());
         mActivities.setHasFixedSize(true);
-        ///Log.d("New activity",getApplicationContext().toString());
-        ///getApplicationContext().startActivity(new Intent(getApplicationContext(),AuthUiActivity.class));
+        Log.d("New activity", getApplicationContext().toString());
+        getApplicationContext().startActivity(new Intent(getApplicationContext(), AuthUiActivity.class));
 
         FirebaseAuth auth = FirebaseAuth.getInstance();
         if (auth.getCurrentUser() != null) {

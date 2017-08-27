@@ -2,19 +2,19 @@ package com.firebase.uidemo.icode2017;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
-import android.view.View;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.firebase.uidemo.R;
@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity
         TextView nav_user = (TextView)hView.findViewById(R.id.user_display_name);
         TextView nav_email = (TextView)hView.findViewById(R.id.user_email);
         if(mAuth.getCurrentUser()!=null){
+            Log.d("Hello", "Current user loaded");
             nav_user.setText(mAuth.getCurrentUser().getDisplayName());
             nav_email.setText(mAuth.getCurrentUser().getEmail());
         }

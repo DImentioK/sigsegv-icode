@@ -1,14 +1,18 @@
 package com.firebase.uidemo.icode2017;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.firebase.uidemo.R;
+import com.google.firebase.auth.FirebaseAuth;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,14 +27,35 @@ public class ProfileEditorFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
+
+    @BindView(R.id.profile_name_display)
+    TextView name;
+    @BindView(R.id.profile_email_display)
+    TextView email;
+    @BindView(R.id.profile_residency_display)
+    TextView residency;
+    @BindView(R.id.profile_points_display)
+    TextView points;
+    @BindView(R.id.profile_preset_display)
+    TextView preset;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
         View rootView= inflater.inflate(R.layout.fragment_profile_editor, container, false);
+        ButterKnife.bind(this, rootView);
 
         /* TODO
-        Implement profile options
+        1. Search database for user points/exp  AND residency
+        2. display preset identifier
          */
+        if (mAuth.getCurrentUser() != null) {
+            Log.d("Hello", "Current user loaded");
+            Log.d("Text", mAuth.getCurrentUser().getDisplayName());
+            name.setText(mAuth.getCurrentUser().getDisplayName());
+            email.setText(mAuth.getCurrentUser().getEmail());
+        }
 
         return rootView;
 

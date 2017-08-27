@@ -12,10 +12,16 @@
     <!-- PROJECT SPECIFIC STRINGS -->
     <string name="continue_with_current_account">Use currently signed in account</string>
     <string name="title_activity_main">icode 2017</string>
+    <string name="profile_name">Name:</string>
+    <string name="profile_email">Email:</string>
+    <string name="profile_residency">Status:</string>
+    <string name="profile_points">Level/Exp:</string>
+    <string name="profile_preset">Default Preset:</string>
+    <string name="profile_history">History</string>
 
 
     <!-- strings for Auth UI demo activities -->
-    <eat-comment/>
+    <eat-comment />
     <string name="launch_title">FirebaseUI Auth Demo</string>
     <string name="sign_in">Start</string>
     <string name="green_theme">Green Theme</string>
