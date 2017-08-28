@@ -18,7 +18,10 @@
     <string name="profile_points">Level/Exp:</string>
     <string name="profile_preset">Default Preset:</string>
     <string name="profile_history">History</string>
-
+    <string name="residency">Residency:</string>
+    <string name="continueToApp">Continue to app</string>
+    <string name="tourist">Tourist</string>
+    <string name="resident">Resident</string>
 
     <!-- strings for Auth UI demo activities -->
     <eat-comment />

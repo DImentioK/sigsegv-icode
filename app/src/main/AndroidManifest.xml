@@ -1,57 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          package="com.firebase.uidemo">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.firebase.uidemo">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".auth.LeakCatcher"
-        android:label="iCode 2017"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
+        android:label="iCode 2017"
         android:supportsRtl="false"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".ChooserActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
             <meta-data
                 android:name="android.app.shortcuts"
-                android:resource="@xml/shortcuts"/>
+                android:resource="@xml/shortcuts" />
         </activity>
 
         <!-- Project Files -->
-
+        <activity
+            android:name=".icode2017.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <!-- Chat demo -->
         <activity
             android:name=".database.ChatActivity"
-            android:label="@string/name_chat"/>
+            android:label="@string/name_chat" />
 
         <!-- Auth UI demo -->
         <activity
             android:name=".auth.AuthUiActivity"
-            android:label="@string/name_auth_ui"/>
+            android:label="@string/name_auth_ui" />
         <activity
             android:name=".auth.SignedInActivity"
-            android:label="@string/name_auth_ui"/>
+            android:label="@string/name_auth_ui" />
 
         <!-- Storage UI demo -->
         <activity
             android:name=".storage.ImageActivity"
-            android:label="@string/name_image"/>
-        <activity
-            android:name=".icode2017.MainActivity"
-            android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:label="@string/name_image" />
+        <activity android:name=".icode2017.NewUserActivity"></activity>
     </application>
 
 </manifest>
