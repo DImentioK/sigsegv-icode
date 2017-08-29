@@ -1,14 +1,6 @@
 <resources>
     <string name="app_name">Firebase UI</string>
 
-    <string name="name_chat">ChatActivity</string>
-    <string name="name_auth_ui">Auth UI demo</string>
-    <string name="name_image">Storage Image Demo</string>
-
-    <string name="desc_chat">Demonstrates using a FirebaseRecyclerAdapter to load data from Firebase Database into a RecyclerView for a basic chat app.</string>
-    <string name="desc_auth_ui">Demonstrates the Firebase Auth UI flow, with customization options.</string>
-    <string name="desc_image">Demonstrates displaying an image from Cloud Storage using Glide.</string>
-
     <!-- PROJECT SPECIFIC STRINGS -->
     <string name="continue_with_current_account">Use currently signed in account</string>
     <string name="title_activity_main">icode 2017</string>
@@ -22,6 +14,43 @@
     <string name="continueToApp">Continue to app</string>
     <string name="tourist">Tourist</string>
     <string name="resident">Resident</string>
+    <string name="signout">Sign Out</string>
+    <string name="reset">Reset Account</string>
+
+    /* Preset Setting Class*/
+    <string name="preset">Presets</string>
+
+    <string name="general">General Settings</string>
+    <string name="about">About</string>
+    <string name="aboutInfo">This application was created jointly by 3 coders in NUS High under the
+            team name of SIGSEGV. /nThis application was originally created for i.code 2017.</string>
+    <string name="software">Software Version</string>
+    <string name="softwareInfo">Software Version 1.1</string>
+
+    <string name="notif">Notifications</string>
+    <string name="notifText">Allow notifications</string>
+    <string name="notifToast">Notifications setting has been updated</string>
+
+    <string name="pw">Change Password</string>
+    <string name="currentHint">Current Password</string>
+    <string name="newHint">New Password</string>
+    <string name="mismatchError">Your current password is incorrect</string>
+    <string name="sameError">Your new password cannot be the same as your current password</string>
+    <string name="pwSet">New password has been set</string>
+
+    <string name="sound">Sounds</string>
+    <string name="soundOp">Enable Sound</string>
+    <string name="soundToast">Sound setting has been updated</string>
+
+
+    <string name="name_chat">ChatActivity</string>
+    <string name="name_auth_ui">Auth UI demo</string>
+    <string name="name_image">Storage Image Demo</string>
+
+    <string name="desc_chat">Demonstrates using a FirebaseRecyclerAdapter to load data from Firebase Database into a RecyclerView for a basic chat app.</string>
+    <string name="desc_auth_ui">Demonstrates the Firebase Auth UI flow, with customization options.</string>
+    <string name="desc_image">Demonstrates displaying an image from Cloud Storage using Glide.</string>
+
 
     <!-- strings for Auth UI demo activities -->
     <eat-comment />
@@ -78,6 +107,7 @@
     <string name="accessibility_downloaded_image">Downloaded image</string>
     <string name="drive_file">Drive File</string>
     <string name="allow_new_email_acccount">Allow account creation if email does not exist.</string>
+
 
     <!-- strings for database demo activities -->
     <string name="start_chatting">No messages. Start chatting at the bottom!</string>

@@ -31,7 +31,16 @@
         <activity
             android:name=".icode2017.MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <activity android:name=".settings.Settings"></activity>
+        <activity android:name=".settings.general"></activity>
+        <activity android:name=".settings.notif"></activity>
+        <activity android:name=".settings.pw"></activity>
+        <activity android:name=".settings.sound"></activity>
+        <activity android:name=".settings.presets"></activity>
 
         <!-- Chat demo -->
         <activity

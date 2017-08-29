@@ -22,7 +22,7 @@ public class NewUserActivity extends AppCompatActivity {
     ToggleButton toggle;
     @BindView(R.id.newUser_ContinueButton)
     Button btn;
-    private String residency;
+    private String residency = "Tourist";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

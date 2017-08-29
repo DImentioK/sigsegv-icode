@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     tools:context="com.firebase.uidemo.icode2017.ProfileEditorFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -90,7 +89,7 @@
             android:layout_below="@id/profile_points_text"
             android:layout_marginBottom="8dp"
             android:layout_marginRight="8dp"
-            android:text="@string/profile_preset"
+            android:text="Current Preset:"
             android:textSize="16sp" />
 
         <TextView

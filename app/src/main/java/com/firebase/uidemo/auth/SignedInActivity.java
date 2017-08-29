@@ -89,12 +89,11 @@ public class SignedInActivity extends AppCompatActivity {
     }
 
     /* If user intends to use current account,continue on to Main Application */
-
     @OnClick(R.id.continueButton)
     public void continueToMainApp(){
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        if (prefs.getBoolean(user.getEmail(), false)) {
+        if (!prefs.getBoolean(user.getEmail(), false)) {
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean(user.getEmail(), true);
             editor.apply();

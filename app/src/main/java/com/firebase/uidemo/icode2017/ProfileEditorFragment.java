@@ -10,6 +10,11 @@ import android.widget.TextView;
 
 import com.firebase.uidemo.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -56,6 +61,34 @@ public class ProfileEditorFragment extends Fragment {
             name.setText(mAuth.getCurrentUser().getDisplayName());
             email.setText(mAuth.getCurrentUser().getEmail());
         }
+
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+        ref.addListenerForSingleValueEvent(
+                new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        String currentPreset = dataSnapshot.child("users")
+                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                .child("preset").child("category").getValue().toString();
+                        currentPreset = currentPreset.replaceFirst("_", " + ");
+                        String d = dataSnapshot.child("users")
+                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                .child("preset").child("distance").getValue().toString();
+                        if (d.equals("50")) d = "∞";
+                        currentPreset = currentPreset.concat(" | " + d + " km");
+                        String r = dataSnapshot.child("users")
+                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                .child("residency").getValue().toString();
+
+                        preset.setText(currentPreset);
+                        residency.setText(r);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        //handle databaseError
+                    }
+                });
 
         return rootView;
 

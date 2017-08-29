@@ -1,5 +1,6 @@
 package com.firebase.uidemo.icode2017;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -18,8 +19,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.firebase.uidemo.R;
+import com.firebase.uidemo.settings.Settings;
 import com.google.firebase.auth.FirebaseAuth;
 
+//TODO Change navigation type
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -94,7 +97,7 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            startActivity(new Intent(this, Settings.class));
         }
 
         return super.onOptionsItemSelected(item);
